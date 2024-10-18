@@ -1,0 +1,191 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+:root{
+    --Purple-100: hsl(254, 88%, 90%);
+    --Purple-500: hsl(256, 67%, 59%);
+    
+    --Yellow-100: hsl(31, 66%, 93%);
+    --Yellow-500: hsl(39, 100%, 71%);
+    
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 7%);
+    }
+.Container{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    height: 100%;
+}
+img{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.grid-container{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    height: 80vh;
+    width: min-content;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    'grid-item-7 grid-item-1 grid-item-1 grid-item-4'
+    'grid-item-7 grid-item-2 grid-item-3 grid-item-4'
+    'grid-item-8 grid-item-2 grid-item-3 grid-item-4'
+    'grid-item-8 grid-item-6 grid-item-5 grid-item-5'
+    ;
+}
+.grid-container > div{
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 0 0px 5px 0px #dedede;
+    border-radius: 0.5rem;
+}
+.grid-item-1{
+    text-align: center;
+    color: var(--White);
+    height: 150px;
+    background-color: var(--Purple-500);
+    grid-area: grid-item-1;
+}
+.grid-item-1 > img{
+    width: 120px;
+}
+.grid-item-2{
+    height:20vh;
+    width: 20vh;
+    grid-area: grid-item-2;
+}
+.grid-item-2 > img{
+    height: 40px;
+}
+.grid-item-3{
+    height:20vh;
+    width: 20vh;
+    background-color: var(--Yellow-500);
+    grid-area: grid-item-3;
+}
+.grid-item-3 > img{
+    display: flex;
+    justify-self: center;
+    height: 100px;
+}
+.grid-item-4{
+    width: 20vh;
+    background-color: var(--Purple-100);
+    grid-area: grid-item-4;
+}
+.grid-item-4 > img{
+    display: flex;
+    justify-self: center;
+    height: 205px;
+}
+.grid-item-5{
+    display: flex;
+    align-items: center;
+    color: var(--White);
+    height:19.75vh;
+    background-color: var(--Purple-500);
+    grid-area: grid-item-5;
+}
+.grid-item-5 > img{
+    height: 140px;
+}
+.grid-item-6{
+    height: 20vh;
+    width: 20vh;
+    grid-area: grid-item-6;
+}
+.grid-item-6 > img{
+    display: flex;
+    justify-self: center;
+    height: 45px;
+}
+.grid-item-7{
+    width: 20vh;
+    background-color: var(--Yellow-100);
+    grid-area: grid-item-7;
+}
+.grid-item-7 > img{
+    height: 60px;
+    margin: auto;
+}
+.grid-item-8{
+    width: 20vh;
+    background-color: var(--Yellow-500);
+    grid-area: grid-item-8;
+}
+.grid-item-8 > img{
+    height: 130px;
+}
+h1{
+    font-size: 1.90rem;
+    font-weight: 400;
+}
+h2{
+    font-size: 1.20rem;
+    font-weight: 600;
+}
+h3{
+    font-size: 1.10rem;
+    font-weight: 500;
+}
+h4{
+    font-size: 1rem;
+    font-weight: 600;
+}
+p{
+    font-size: 0.75rem;
+}
+.purple{
+    color: var(--Purple-500);
+}
+.orange{
+    color: var(--Yellow-500);
+}
+.italic{
+    font-style: italic;
+}
+footer{
+    position: relative;
+    bottom: 0;
+}
+
+@media only screen and (max-width:800px) {
+    .Container{
+        height: fit-content;
+    }
+
+    .grid-container{
+        margin: 1rem;
+        display: block;
+        height: fit-content;
+        grid-gap: 1rem;
+
+    }
+    .grid-container > div {
+        width: 35vh;
+        height: min-content;
+        margin: 1rem;
+    }
+    .grid-item-4{
+        text-align: center;
+        width: 20vh;
+        background-color: var(--Purple-100);
+        grid-area: grid-item-4;
+    }
+    .grid-item-5{
+        display: block;
+        align-items: center;
+        text-align: center;
+        color: var(--White);
+        height:19.75vh;
+        background-color: var(--Purple-500);
+        grid-area: grid-item-5;
+    }
+}
